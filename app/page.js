@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Landing from "./_components/Landing";
-import { Topbar } from "./_components/Navbar";
+import { Sidenav, Topbar } from "./_components/Navbar";
 import Work from "./_components/Work";
 import Skills from "./_components/Skills";
 import Contact from "./_components/Contact";
@@ -32,6 +32,8 @@ export default function Home() {
       </div>
       */}
 
+      <Sidenav />
+
       <Topbar />
 
       <Landing />
@@ -41,6 +43,10 @@ export default function Home() {
       <Skills />
 
       <Contact />
+
+      <footer className="px-14 py-8 border-t-[1px] border-foreground/20">
+        <span className="font-mono font-light text-lg text-center uppercase">Made with ❤️ and 🦀 by Amartya Chowdhury</span>
+      </footer>
     </>
   );
 }

@@ -11,8 +11,8 @@ export const Card = ({ project }) => {
         <div className='flex flex-col gap-2'>
           <span className='text-4xl font-sans font-medium uppercase'>{project.title}</span>
           <div className='flex gap-3'>
-            {project.tags.map((t) => (
-              <Tag name={t} />
+            {project.tags.map((t, i) => (
+              <Tag name={t} key={i} />
             ))}
           </div>
         </div>

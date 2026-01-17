@@ -15,8 +15,8 @@ const Skills = () => {
         <div className='flex flex-col gap-6'>
           <h3 className='font-mono font-medium text-4xl uppercase'>languages</h3>
           <div className='flex flex-col gap-3 text-center w-1/4'>
-            {languages.map((l) => (
-              <Tag name={l} />
+            {languages.map((l, i) => (
+              <Tag name={l} key={i} />
             ))}
           </div>
         </div>
@@ -24,8 +24,8 @@ const Skills = () => {
         <div className='flex flex-col gap-6'>
           <h3 className='font-mono font-medium text-4xl uppercase'>frameworks/libraries</h3>
           <div className='flex flex-col gap-3 text-center w-1/4'>
-            {frameworks.map((f) => (
-              <Tag name={f} />
+            {frameworks.map((f, i) => (
+              <Tag name={f} key={i} />
             ))}
           </div>
         </div>
@@ -33,8 +33,8 @@ const Skills = () => {
         <div className='flex flex-col gap-6'>
           <h3 className='font-mono font-medium text-4xl uppercase'>tools</h3>
           <div className='flex flex-col gap-3 text-center w-1/4'>
-            {tools.map((t) => (
-              <Tag name={t} />
+            {tools.map((t, i) => (
+              <Tag name={t} key={i} />
             ))}
           </div>
         </div>

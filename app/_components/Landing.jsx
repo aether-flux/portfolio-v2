@@ -3,11 +3,11 @@ import React from 'react'
 
 const Landing = () => {
   return (
-      <section id="landing" className='flex flex-col gap-20 p-14 mb-20'>
+      <section id="intro" className='flex flex-col gap-20 p-14 mb-20'>
 
         <div className='flex flex-col gap-5'>
           <span className='font-sans font-medium text-6xl uppercase leading-[1.15] w-1/2'>i build developer tools and systems with performance and dx in mind</span>
-          <span className='font-mono font-light text-lg uppercase'>systems & backend developer</span>
+          <span className='font-mono font-light text-lg uppercase hover:opacity-70 duration-200'>systems & backend developer</span>
         </div>
 
         <div className='flex gap-6'>
