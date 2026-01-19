@@ -10,11 +10,28 @@ export const Topbar = () => {
   return (
     <nav className='p-14'>
 
-      <Link href="/" className='hover:opacity-70 duration-200'>
+      <Link href="/" className='hover:opacity-70 duration-200 w-fit block'>
         <Image
           src="/port-logo.svg"
           width={200}
           height={47}
+          alt="Amartya Chowdhury"
+        />
+      </Link>
+
+    </nav>
+  )
+}
+
+export const MiniTopbar = () => {
+  return (
+    <nav className='px-5 md:px-14 p-5 md:p-7'>
+
+      <Link href="/" className='hover:opacity-70 duration-200 w-fit block'>
+        <Image
+          src="/port-logo.svg"
+          width={150}
+          height={35}
           alt="Amartya Chowdhury"
         />
       </Link>
@@ -76,7 +93,7 @@ export const Sidenav = () => {
   //   : {};
 
   return (
-    <nav className='fixed top-1/2 right-10 -translate-y-1/2'>
+    <nav className='fixed top-1/2 right-10 -translate-y-1/2 hidden md:block'>
 
       <div className="relative">
         <span

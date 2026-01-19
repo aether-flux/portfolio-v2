@@ -44,8 +44,8 @@ export default function Home() {
 
       <Contact />
 
-      <footer className="px-14 py-8 border-t-[1px] border-foreground/20">
-        <span className="font-mono font-light text-lg text-center uppercase">Made with ❤️ and 🦀 by Amartya Chowdhury</span>
+      <footer className="p-5 md:px-14 md:py-8 border-t-[1px] border-foreground/20">
+        <span className="font-mono font-light text-sm md:text-lg text-center uppercase">Made with ❤️ and 🦀 by Amartya Chowdhury</span>
       </footer>
     </>
   );

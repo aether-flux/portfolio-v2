@@ -7,14 +7,14 @@ const Skills = () => {
   let frameworks = ["node.js", "express", "react.js", "next.js"];
 
   return (
-    <section id="skills" className='flex flex-col gap-16 p-14 mb-20'>
+    <section id="skills" className='flex flex-col gap-8 md:gap-16 p-5 md:p-14 mb-10 md:mb-20'>
 
-      <h1 className='font-sans font-medium text-6xl uppercase leading-[1.15]'>what i use to build stuff</h1>
+      <h1 className='font-sans font-medium text-2xl md:text-6xl uppercase leading-[1.15]'>what i use to build stuff</h1>
 
-      <div className='grid grid-cols-2 gap-16'>
-        <div className='flex flex-col gap-6'>
-          <h3 className='font-mono font-medium text-4xl uppercase'>languages</h3>
-          <div className='flex flex-col gap-3 text-center w-1/4'>
+      <div className='grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16'>
+        <div className='flex flex-col gap-3 md:gap-6'>
+          <h3 className='font-mono font-medium text-2xl md:text-4xl uppercase'>languages</h3>
+          <div className='flex flex-col gap-3 text-center w-1/2 md:w-1/4'>
             {languages.map((l, i) => (
               <Tag name={l} key={i} />
             ))}
@@ -22,8 +22,8 @@ const Skills = () => {
         </div>
 
         <div className='flex flex-col gap-6'>
-          <h3 className='font-mono font-medium text-4xl uppercase'>frameworks/libraries</h3>
-          <div className='flex flex-col gap-3 text-center w-1/4'>
+          <h3 className='font-mono font-medium text-2xl md:text-4xl uppercase'>frameworks/libraries</h3>
+          <div className='flex flex-col gap-3 text-center w-1/2 md:w-1/4'>
             {frameworks.map((f, i) => (
               <Tag name={f} key={i} />
             ))}
@@ -31,8 +31,8 @@ const Skills = () => {
         </div>
 
         <div className='flex flex-col gap-6'>
-          <h3 className='font-mono font-medium text-4xl uppercase'>tools</h3>
-          <div className='flex flex-col gap-3 text-center w-1/4'>
+          <h3 className='font-mono font-medium text-2xl md:text-4xl uppercase'>tools</h3>
+          <div className='flex flex-col gap-3 text-center w-1/2 md:w-1/4'>
             {tools.map((t, i) => (
               <Tag name={t} key={i} />
             ))}

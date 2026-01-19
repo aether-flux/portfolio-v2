@@ -27,7 +27,7 @@ export const Tag = ({ name }) => {
   }
 
   return (
-    <div className='px-4 py-1 rounded-full hover:opacity-80 duration-200' style={{ backgroundColor: `${color}88` }}>
+    <div className='px-3 md:px-4 py-0 rounded-full hover:opacity-80 duration-200' style={{ backgroundColor: `${color}88` }}>
       <span className='font-mono text-foreground text-sm uppercase'>{name}</span>
     </div>
   )
