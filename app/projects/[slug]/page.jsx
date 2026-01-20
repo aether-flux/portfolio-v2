@@ -19,7 +19,7 @@ export default async function ({ params }) {
     <>
       <MiniTopbar />
 
-      <section id={params.slug} className='flex flex-col gap-4 px-5 md:p-14 pt-0 mb-5 md:mb-10'>
+      <section id={params.slug} className='flex flex-col gap-4 md:gap-8 px-5 md:p-14 pt-0 mb-5 md:mb-10'>
 
         <div className='flex items-center gap-4 md:gap-10'>
           <div className='text-2xl md:text-4xl font-mono font-medium hover:text-foreground/70 duration-200'>{String(idx).padStart(2, '0')}</div>

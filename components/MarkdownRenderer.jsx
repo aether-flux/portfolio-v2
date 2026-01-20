@@ -19,13 +19,16 @@ export const MarkdownRenderedr = ({ content }) => {
             <h3 className="font-sans text-md md:text-xl mt-5 md:mt-10 mb-1 md:mb-2" {...props} />
           ),
           p: ({node, ...props}) => (
-            <p className="font-mono text-xs md:text-sm text-foreground/80 leading-relaxed mb-2 md:mb-4" {...props} />
+            <p className="font-mono text-xs md:text-lg text-foreground/80 leading-relaxed mb-2 md:mb-4" {...props} />
           ),
           a: ({node, ...props}) => (
-            <a className="font-mono text-xs md:text-sm text-foreground leading-relaxed underline hover:text-foreground/70 duration-150 mb-2 md:mb-4" {...props} />
+            <a className="font-mono text-xs md:text-lg text-foreground leading-relaxed underline hover:text-foreground/70 duration-150 mb-2 md:mb-4" {...props} />
+          ),
+          ul: ({node, ...props}) => (
+            <ul className="list-disc font-mono text-xs md:text-lg text-foreground/80 leading-relaxed mb-2 md:mb-4" {...props} />
           ),
           img: ({node, ...props}) => (
-            <img className="rounded-lg my-3 md:my-6 border border-white/10 max-w-full h-auto" {...props} />
+            <img className="rounded-lg my-3 md:my-6 border border-white/10 max-w-1/2 h-auto" {...props} />
           ),
           code: ({node, inline, className, children, ...props}) => (
             <code

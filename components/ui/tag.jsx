@@ -1,6 +1,6 @@
 export const Tag = ({ name }) => {
   name = name.toLowerCase();
-  let color;
+  let color = '#CCCCCC';
 
   if (name === 'rust') {
     color = '#DD5509'

@@ -1,5 +1,6 @@
 "use client";
 
+import { Menu, X } from 'lucide-react';
 import Image from 'next/image'
 import Link from 'next/link'
 import React, { useState, useEffect, useRef } from 'react'
@@ -7,19 +8,63 @@ import React, { useState, useEffect, useRef } from 'react'
 const sections = ["intro", "work", "skills", "contact"];
 
 export const Topbar = () => {
+  const [open, setOpen] = useState(false);
+
+  useEffect(() => {
+    document.body.style.overflow = open ? "hidden" : "";
+  }, [open])
+
   return (
-    <nav className='p-14'>
+    <>
+      <nav className='px-5 md:px-14 p-5 md:p-7 flex items-center justify-between'>
 
-      <Link href="/" className='hover:opacity-70 duration-200 w-fit block'>
-        <Image
-          src="/port-logo.svg"
-          width={200}
-          height={47}
-          alt="Amartya Chowdhury"
-        />
-      </Link>
+        <Link href="/" className='hover:opacity-70 duration-200 w-fit block'>
+          <Image
+            src="/port-logo.svg"
+            width={200}
+            height={47}
+            className="w-[120px] md:w-[200px]"
+            alt="Amartya Chowdhury"
+          />
+        </Link>
 
-    </nav>
+        <button onClick={() => setOpen(!open)} className="z-[170] md:hidden">
+          {open 
+            ? <X className="w-4 h-4 text-foreground hover:text-foreground/70 duration-200 cursor-pointer md:hidden" /> 
+            : <Menu className="w-4 h-4 text-foreground hover:text-foreground/70 duration-200 cursor-pointer md:hidden" />}
+        </button>
+
+      </nav>
+
+      <MobileNav open={open} onClose={() => setOpen(false)} />
+    </>
+  )
+}
+
+export const MobileNav = ({ open, onClose }) => {
+  return (
+    <div
+      className={`fixed inset-0 z-[125] bg-background/70 backdrop-blur-md transition-transform duration-200 ease-in-out
+      ${open ? "translate-x-0" : "translate-x-full"}`}
+    >
+      <div className="h-full flex flex-col justify-center px-8">
+
+        <ul className="flex flex-col gap-8 text-4xl font-sans uppercase tracking-wide">
+          {sections.map((id) => (
+            <li key={id}>
+              <Link
+                href={`#${id}`}
+                onClick={onClose}
+                className="hover:opacity-70 transition-opacity"
+              >
+                {id}
+              </Link>
+            </li>
+          ))}
+        </ul>
+
+      </div>
+    </div>
   )
 }
 
@@ -30,8 +75,9 @@ export const MiniTopbar = () => {
       <Link href="/" className='hover:opacity-70 duration-200 w-fit block'>
         <Image
           src="/port-logo.svg"
-          width={150}
-          height={35}
+          width={200}
+          height={47}
+          className="w-[120px] md:w-[200px]"
           alt="Amartya Chowdhury"
         />
       </Link>
