@@ -16,17 +16,20 @@ export const Topbar = () => {
 
   return (
     <>
-      <nav className='px-5 md:px-14 p-5 md:p-7 flex items-center justify-between'>
+      <nav className='px-5 md:px-14 p-5 md:p-7 flex items-start justify-between'>
 
-        <Link href="/" className='hover:opacity-70 duration-200 w-fit block'>
-          <Image
-            src="/port-logo.svg"
-            width={200}
-            height={47}
-            className="w-[120px] md:w-[200px]"
-            alt="Amartya Chowdhury"
-          />
-        </Link>
+        <div className='flex flex-col gap-3'>
+          <Link href="/" className='hover:opacity-70 duration-200 w-fit block'>
+            <Image
+              src="/port-logo.svg"
+              width={200}
+              height={47}
+              className="w-[120px] md:w-[200px]"
+              alt="Amartya Chowdhury"
+            />
+          </Link>
+          <span className='font-mono font-light text-sm md:text-md uppercase hover:opacity-70 duration-200'>{'> '}I use Arch BTW</span>
+        </div>
 
         <button onClick={() => setOpen(!open)} className="z-[170] md:hidden">
           {open 
@@ -72,15 +75,18 @@ export const MiniTopbar = () => {
   return (
     <nav className='px-5 md:px-14 p-5 md:p-7'>
 
-      <Link href="/" className='hover:opacity-70 duration-200 w-fit block'>
-        <Image
-          src="/port-logo.svg"
-          width={200}
-          height={47}
-          className="w-[120px] md:w-[200px]"
-          alt="Amartya Chowdhury"
-        />
-      </Link>
+      <div className='flex flex-col gap-3'>
+        <Link href="/" className='hover:opacity-70 duration-200 w-fit block'>
+          <Image
+            src="/port-logo.svg"
+            width={200}
+            height={47}
+            className="w-[120px] md:w-[200px]"
+            alt="Amartya Chowdhury"
+          />
+        </Link>
+        <span className='font-mono font-light text-sm md:text-md uppercase hover:opacity-70 duration-200'>{'> '}I use Arch BTW</span>
+      </div>
 
     </nav>
   )
@@ -132,11 +138,6 @@ export const Sidenav = () => {
   }, [])
 
   const activeIdx = sections.indexOf(active);
-  // const indicatorStyle = itemRefs.current[activeIdx]
-  //   ? {
-  //     top: itemRefs.current[activeIdx].offsetTop + itemRefs.current[activeIdx].offsetHeight / 2,
-  //   }
-  //   : {};
 
   return (
     <nav className='fixed top-1/2 right-10 -translate-y-1/2 hidden md:block'>
@@ -153,12 +154,6 @@ export const Sidenav = () => {
               <Link href={`#${id}`}>{id}</Link>
             </li>
           ))}
-          {/*
-          <li className="hover:text-foreground/70 duration-200"><Link href="#intro">intro</Link></li>
-          <li className="hover:text-foreground/70 duration-200 text-foreground/50"><Link href="#work">work</Link></li>
-          <li className="hover:text-foreground/70 duration-200 text-foreground/50"><Link href="#skills">skills</Link></li>
-          <li className="hover:text-foreground/70 duration-200 text-foreground/50"><Link href="#contact">contact</Link></li>
-          */}
         </ul>
       </div>
 

@@ -32,7 +32,7 @@ export const MarkdownRenderedr = ({ content }) => {
           ),
           code: ({node, inline, className, children, ...props}) => (
             <code
-              className={`font-mono text-xs md:text-sm bg-foreground/10 text-accent ${
+              className={`font-mono text-xs md:text-sm bg-foreground/5 text-accent mb-2 md:mb-4 ${
                 inline ? "px-1 py-0.5 rounded" : "block p-4 rounded-lg"
               }`}
               {...props}

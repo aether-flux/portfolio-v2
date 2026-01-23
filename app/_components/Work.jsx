@@ -10,7 +10,7 @@ const Work = () => {
       <h1 className='font-sans font-medium text-2xl md:text-6xl uppercase leading-[1.15]'>stuff i make when i'm bored</h1>
 
       <div className='flex flex-col gap-3 md:gap-5'>
-        {projects.reverse().map((p, i) => {
+        {projects.toReversed().map((p, i) => {
           return (
             <Link key={i} href={`/projects/${p.slug}`}><Card project={p} idx={projects.length-i} /></Link>
           );
