@@ -37,7 +37,7 @@ println!("Threads: {}", config.threads);
 
 This design leverages Rust's procedural macros to automatically generate parsing, validation, and documentation logic from the struct definition.
 
-# Challenges and Learnings
+# Challenges
 - Exploring procedural macros beefed up my understanding of compile-time code generation.
 - Balancing ergonomic API design with strict validation rules was an interesting trade-off.
 - Building support for multiple formats (TOML/JSON/YAML) clarified how feature flags can shape flexible dependency graphs.
