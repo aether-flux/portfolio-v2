@@ -1,4 +1,5 @@
 import { PrimaryBtn, SecondaryBtn } from '@/components/ui/button'
+import Link from 'next/link'
 import React from 'react'
 
 const Landing = () => {
@@ -11,7 +12,7 @@ const Landing = () => {
         </div>
 
         <div className='flex flex-col md:flex-row gap-6'>
-          <PrimaryBtn>See Resume</PrimaryBtn>
+          <Link href="https://drive.google.com/file/d/1tKdOjy1K6Z-vVZAsJIxD0g5VQ_aCJOHj/view?usp=sharing"><PrimaryBtn>See Resume</PrimaryBtn></Link>
           <SecondaryBtn>
             <div className='flex gap-4 items-center justify-center'>
               <span>Get in touch</span>
