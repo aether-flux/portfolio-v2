@@ -13,7 +13,7 @@ export const Card = ({ project, idx }) => {
 
         <div className='flex flex-col gap-2'>
           <span className='text-2xl md:text-4xl font-sans font-medium uppercase'>{project.title}</span>
-          <div className='flex gap-3'>
+          <div className='flex gap-3 flex-wrap'>
             {project.tags.map((t, i) => (
               <Tag name={t} key={i} />
             ))}
