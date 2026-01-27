@@ -12,7 +12,7 @@ const Landing = () => {
         </div>
 
         <div className='flex flex-col md:flex-row gap-6'>
-          <Link href="https://drive.google.com/file/d/1tKdOjy1K6Z-vVZAsJIxD0g5VQ_aCJOHj/view?usp=sharing"><PrimaryBtn>See Resume</PrimaryBtn></Link>
+          <PrimaryBtn><Link href="https://drive.google.com/file/d/1tKdOjy1K6Z-vVZAsJIxD0g5VQ_aCJOHj/view?usp=sharing" target="_blank">See Resume</Link></PrimaryBtn>
           <SecondaryBtn>
             <div className='flex gap-4 items-center justify-center'>
               <span>Get in touch</span>
