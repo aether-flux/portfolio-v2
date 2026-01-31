@@ -42,3 +42,20 @@ export default async function ({ params }) {
     </>
   )
 }
+
+export async function generateMetadata({ params }) {
+  params = await params;
+  const project = projects.find((p) => p.slug === params.slug);
+
+  if (!project) {
+    return {
+      title: "Project not found - Amartya",
+      description: "This project does not exist.",
+    };
+  }
+
+  return {
+    title: `${project.title} - Amartya`,
+    description: project.summary ?? `${project.title} project details`,
+  };
+}

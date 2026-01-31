@@ -11,7 +11,7 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const siteUrl = process.env.SITE_URL || "https://amartya-dev.vercel.app";
+const siteUrl = process.env.SITE_URL || "https://amarch.vercel.app";
 
 const structuredData = {
   "@context": "http://schema.org",
@@ -21,37 +21,62 @@ const structuredData = {
   url: siteUrl,
   sameAs: [
     "https://www.linkedin.com/in/amartya-chowdhury",
-    "https://github.com/xerctia",
+    "https://github.com/aether-flux",
   ],
 };
 
 export const metadata = {
   title: "Amartya Chowdhury",
   description:
-    "Portfolio website of Amartya Chowdhury, a web developer in React and Next js, and Express. See all of Amartya's skills, works, projects, experience and other professional aspects.",
+    "Backend, systems, and DX-focused developer. Working with Rust, Node.js, infra tooling, and developer-first frameworks.",
   icons: {
     icon: "/faviconPort.ico",
   },
-  // openGraph: {
-  //   type: "website",
-  //   url: siteUrl,
-  //   title: "Amartya Chowdhury's Portfolio",
-  //   description: "Showcasing web development projects, skills, and more.",
-  //   images: [
-  //     {
-  //       url: `${siteUrl}/og-img.jpg`,
-  //       width: 1200,
-  //       height: 630,
-  //       alt: "My Portfolio Image",
-  //     },
-  //   ],
-  // },
-  // twitter: {
-  //   card: "summary_large_image",
-  //   title: "Amartya Chowdhury's Portfolio",
-  //   description: "Showcasing web development projects, skills, and more.",
-  //   image: `${siteUrl}/og-img.jpg`,
-  // },
+  openGraph: {
+    type: "website",
+    url: siteUrl,
+    siteName: "Amarch",
+    title: "Amartya Chowdhury",
+    description: "Backend & systems developer focused on Rust, infra, and DX.",
+    images: [
+      {
+        // url: `${siteUrl}/og-img.jpg`,
+        url: "/og-img.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Amartya Chowdhury - Developer Portfolio",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Amartya Chowdhury's Portfolio",
+    description: "Showcasing web development projects, skills, and more.",
+    image: `${siteUrl}/og-img.jpg`,
+  },
+  other: {
+    "script:ld+json": JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Person",
+      name: "Amartya Chowdhury",
+      url: "https://amarch.vercel.app",
+      sameAs: [
+        "https://github.com/aether-flux",
+        "https://linkedin.com/in/amartya-chowdhury",
+      ],
+      jobTitle: "Backend Developer",
+      knowsAbout: [
+        "Rust",
+        "Backend Systems",
+        "Developer Tooling",
+        "Node.js",
+        "Infra",
+      ],
+    }),
+  },
+  alternates: {
+    canonical: "https://amarch.vercel.app",
+  },
 };
 
 // export const metadata = {
